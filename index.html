@@ -1,5 +1,5 @@
 <!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}.letter-photo{display:block;width:min(100%,300px);margin:16px auto 4px;border-radius:6px;border:6px solid #fffaf0;box-shadow:0 10px 24px rgba(0,0,0,.25);transform:rotate(-1.5deg);opacity:0;transition:opacity .8s}.paper.done .letter-photo{opacity:1}</style></head><body>
-<title>ลอยกระทงด้วยกัน</title>
+<title>ลอยกระทงกับมายย</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anuphan:wght@400;500;600&family=Charmonman:wght@400;700&family=Mali:wght@400;500&display=swap">
@@ -792,7 +792,7 @@ async function doFloat(){
   await askRelease('พร้อมแล้วกดปุ่ม แล้วปล่อยกระทงพร้อมกัน', 'ลอยกระทงพร้อมกัน', 'ลอย!'); Sound.splash();
   KR.forEach(kr => { kr.mode = 'float'; kr.vel.set(.1, 0, -.32); });
   camShot = { track: true, pos: V3(), look: V3() };
-  say(partner, 'ขอให้เราได้ลอยกระทงด้วยกันแบบนี้ทุกปีนะ', 4200); await wait(4600);
+  say(partner, 'ขอให้มายมีความสุขมากๆ ขอให้ข้าพเจ้าได้คบกับมายด้วยเถิดดด', 4200); await wait(4600);
   player.pose = partner.pose = 'idle'; await wait(600); camShot = null; Sound.claps(1.2);
   busy = false; setStep('khom'); say(partner, 'ไปปล่อยโคมลอยกันต่อนะ', 2600);
 }
@@ -814,7 +814,7 @@ async function doKhom(){
   HERO.mode = 'fly'; HERO.vy = .2; lanternWave(); player.pose = partner.pose = 'look'; Sound.claps(1.2);
   holding = true; player.hold = 'right'; partner.hold = 'left';
   camShot = { lantern: true, pos: V3(), look: V3() };
-  say(partner, 'ขอให้เรื่องดี ๆ ลอยขึ้นสูงแบบโคมนี้นะ', 4200); await wait(8000);
+  say(partner, 'ขอให้เรื่องดีๆของเทอ ลอยขึ้นสูงแบบโคมนี้นะ', 4200); await wait(8000);
   player.pose = partner.pose = 'idle'; camShot = null; camYaw = .2;
   busy = false; setStep('fire'); say(partner, 'ไปจุดไฟพุกันต่อ', 2600);
 }
