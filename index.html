@@ -764,7 +764,7 @@ function faceTo(ch, yaw){ ch.yaw = yaw; }
 async function doMeet(){
   busy = true; partner.pose = 'wave'; partner.yaw = yawTo(partner.root.position, player.root.position.x, player.root.position.z);
   player.yaw = yawTo(player.root.position, partner.root.position.x, partner.root.position.z);
-  say(partner, `มาแล้ว! กระทงของเราสองคนอยู่บนโต๊ะนี่ ${CFG.to}`, 3600); await wait(1800); partner.pose = 'idle';
+  say(partner, `เย้เทอมาแล้ว! กระทงของเทอกับเค้าอยู่นี่ ${CFG.to}`, 3600); await wait(1800); partner.pose = 'idle';
   await walkTo(partner, TABLE.x + .7, TABLE.z + .55); partner.yaw = yawTo(partner.root.position, TABLE.x, TABLE.z); busy = false; setStep('light');
 }
 async function doLight(){
@@ -789,10 +789,10 @@ async function doFloat(){
   await wait(500); player.pose = 'kneel'; partner.pose = 'kneel'; player.carry = partner.carry = null; await wait(700);
   KR.forEach((kr, i) => { kr.mode = 'lower'; kr.t = 0; kr.from = kr.grp.position.clone(); kr.to = V3(-.32 + i * .58, 0, -2.05); });
   await wait(900);
-  await askRelease('พร้อมแล้วกดปุ่ม แล้วปล่อยกระทงพร้อมกัน', 'ลอยกระทงพร้อมกัน', 'ลอย!'); Sound.splash();
+  await askRelease('พร้อมแล้วกดปุ่ม แล้วปล่อยกระทงพร้อมกันนะ', 'ลอยกระทงพร้อมกัน', 'ลอย!'); Sound.splash();
   KR.forEach(kr => { kr.mode = 'float'; kr.vel.set(.1, 0, -.32); });
   camShot = { track: true, pos: V3(), look: V3() };
-  say(partner, 'ขอให้มายมีความสุขมากๆ ขอให้ข้าพเจ้าได้คบกับมายด้วยเถิดดด', 4200); await wait(4600);
+  say(partner, 'ขอให้มายมีความสุขมากๆ ขอให้ข้าพเจ้าได้คบกับน้องมายด้วยเถิดดด สาธุ99', 4200); await wait(4600);
   player.pose = partner.pose = 'idle'; await wait(600); camShot = null; Sound.claps(1.2);
   busy = false; setStep('khom'); say(partner, 'ไปปล่อยโคมลอยกันต่อนะ', 2600);
 }
@@ -816,7 +816,7 @@ async function doKhom(){
   camShot = { lantern: true, pos: V3(), look: V3() };
   say(partner, 'ขอให้เรื่องดีๆของเทอ ลอยขึ้นสูงแบบโคมนี้นะ', 4200); await wait(8000);
   player.pose = partner.pose = 'idle'; camShot = null; camYaw = .2;
-  busy = false; setStep('fire'); say(partner, 'ไปจุดไฟพุกันต่อ', 2600);
+  busy = false; setStep('fire'); say(partner, 'ไปจุดไฟพุกันต่อเถอะ', 2600);
 }
 $('#relBtn').addEventListener('click', () => { if (releaseResolve){ const r = releaseResolve; releaseResolve = null; r(); } });
 async function doFire(){
