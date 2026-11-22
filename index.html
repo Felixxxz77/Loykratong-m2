@@ -779,7 +779,7 @@ function doHold(){
   holding = true; player.hold = 'right'; partner.hold = 'left'; player.carry = 'left'; partner.carry = 'right';
   KR[0].mode = 'carry'; KR[0].who = player; KR[1].mode = 'carry'; KR[1].who = partner;
   partner.glad = true; setTimeout(() => { partner.glad = false; }, 1500); Sound.beep(true);
-  say(partner, 'ไปกัน', 1800); setStep('hold'); $('#hint').classList.add('gone');
+  say(partner, 'เย้ เทอจับมือเค้าด้วยย ไปกันน', 1800); setStep('hold'); $('#hint').classList.add('gone');
 }
 let releaseResolve = null;
 async function doFloat(){
